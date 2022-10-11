@@ -2,6 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Blog from "../Blog/Blog";
 import Home from "../Home/Home";
+import NotFound from "../NotFound/NotFound";
 import Quiz from "../Quiz/Quiz";
 import Router from "../Router/Router";
 import Statistics from "../Statistics/Statistics";
@@ -13,6 +14,7 @@ const Nav = () => {
         return fetch("https://openapi.programming-hero.com/api/quiz");
       },
       element: <Router></Router>,
+      errorElement: <NotFound></NotFound>,
       children: [
         {
           path: "/home",
