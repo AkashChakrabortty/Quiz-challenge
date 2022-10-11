@@ -2,7 +2,7 @@ import React from "react";
 
 const Cart = ({ item }) => {
   const { name, logo, total } = item;
-  console.log(item);
+
   return (
     <div>
       <div className="item text-center bg-green-200 text-orange-400 text-lg">

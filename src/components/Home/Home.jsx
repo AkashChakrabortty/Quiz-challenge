@@ -1,10 +1,10 @@
-import React from "react";
-import { useLoaderData } from "react-router-dom";
+import React, { useContext } from "react";
 import Cart from "../Cart/Cart";
+import { Items } from "../Router/Router";
 
 const Home = () => {
-  const loaderData = useLoaderData();
-  const items = loaderData.data;
+  const items = useContext(Items);
+
   return (
     <div className="">
       <div className="header h-1/4 flex">

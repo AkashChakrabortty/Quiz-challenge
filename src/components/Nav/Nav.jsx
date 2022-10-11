@@ -9,14 +9,15 @@ const Nav = () => {
   const router = createBrowserRouter([
     {
       path: "/",
+      loader: async () => {
+        return fetch("https://openapi.programming-hero.com/api/quiz");
+      },
       element: <Router></Router>,
       children: [
         {
           path: "/home",
+          index: true,
           element: <Home></Home>,
-          loader: async () => {
-            return fetch("https://openapi.programming-hero.com/api/quiz");
-          },
         },
         {
           path: "/quiz",
@@ -29,6 +30,10 @@ const Nav = () => {
         {
           path: "/blog",
           element: <Blog></Blog>,
+        },
+        {
+          path: "/",
+          element: <Home></Home>,
         },
       ],
     },
