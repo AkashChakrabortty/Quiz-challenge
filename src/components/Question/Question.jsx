@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 const Question = (props) => {
   const { options } = props.question;
   let [index, setIndex] = useState(undefined);
-  console.log(props.question.correctAnswer);
   const notify = (text) => toast(text);
   return (
     <div className="border-orange-400 border-2 m-5">
@@ -30,12 +29,7 @@ const Question = (props) => {
           <div className="flex md:text-2xl">
             <div
               className={`circle ${
-                (console.log("options[index]= " + options[index]),
-                console.log("element=" + element),
-                options[index] === element
-                  ? console.log("true")
-                  : console.log("false"),
-                options[index] === element ? "text-lime-400	" : "text-zinc-900")
+                options[index] === element ? "text-lime-400	" : "text-zinc-900"
               }`}
             >
               <FontAwesomeIcon icon={faCircle} />
@@ -44,9 +38,7 @@ const Question = (props) => {
               className="option cursor-pointer"
               onClick={(e) => {
                 const i = options.indexOf(e.target.textContent);
-                // console.log(e.target.textContent);
-                // console.dir(e.target);
-                // console.log("indexclick= " + i);
+
                 setIndex(i);
                 const ans =
                   e.target.textContent === props.question.correctAnswer;
