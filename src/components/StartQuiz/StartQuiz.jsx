@@ -8,7 +8,7 @@ const StartQuiz = () => {
 
   return (
     <div>
-      <h2 className="text-center text-2xl">Quiz of {name}</h2>
+      <h2 className="text-center text-2xl md:text-3xl">Quiz of {name}</h2>
       <div className="question w-2/3 mx-auto">
         {questions.map((question) => (
           <Question key={question.id} question={question}></Question>

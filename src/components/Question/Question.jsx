@@ -12,7 +12,7 @@ const Question = (props) => {
   return (
     <div className="border-orange-400 border-2 m-5">
       <div className="header flex justify-between">
-        <div className="question">
+        <div className="question md:text-2xl">
           <h2>
             <span className="text-green-500">Question:</span>
             {props.question.question}
@@ -27,7 +27,7 @@ const Question = (props) => {
       </div>
       {options.map((element) => {
         return (
-          <div className="flex">
+          <div className="flex md:text-2xl">
             <div
               className={`circle ${
                 (console.log("options[index]= " + options[index]),

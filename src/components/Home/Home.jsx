@@ -22,7 +22,7 @@ const Home = () => {
           </h2>
         </div>
       </div>
-      <div className="container flex mt-6 mx-auto">
+      <div className="container grid grid-cols-2 gap-4 md:grid-cols-4 mt-6 mx-auto">
         {items.map((item) => (
           <Cart key={item.id} item={item}></Cart>
         ))}

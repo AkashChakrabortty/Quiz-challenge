@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <div>
       <div className="nav-container flex w-4/5 mx-auto justify-between">
-        <div className="nav-logo text-4xl">
+        <div className="nav-logo text-2xl sm:text-3xl md:text-4xl">
           <Link to="/home">Quiz-challenge</Link>
         </div>
         <div className="nav-items text-xl p-3">
